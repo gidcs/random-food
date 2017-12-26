@@ -14,7 +14,7 @@
             $("button").click(function(){
                 $.ajax({url: "foods.txt", success: function(result){
                     foods = result.split("\n");
-                    i = Math.floor((Math.random() * foods.length));
+                    i = Math.floor((Math.random() * (foods.length - 1)));
                     $("#food").html(foods[i]); 
                 }});
             });
