@@ -11,3 +11,6 @@ cd random-food
 ./food
 ```
 
+## Try it now
+
+https://gidcs.github.io/random-food/
