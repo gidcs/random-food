@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Random Food</title>
+    </head>
+    <body>
+        <div id="food">click button below to make decision</div>
+        <button>Get Food</button>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.ajax({url: "foods.txt", success: function(result){
+                    foods = result.split("\n");
+                    i = Math.floor((Math.random() * foods.length));
+                    $("#food").html(foods[i]); 
+                }});
+            });
+
+        });
+        </script>
+    </body>
+</html>
